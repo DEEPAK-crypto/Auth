@@ -63,4 +63,8 @@ app.post('/login', passport.authenticate('local', {
     failureRedirect: '/login'
 }), function(req, res) {})
 
+app.get('/logout', function(req, res) {
+    req.logout();
+})
+
 app.listen(3000);
